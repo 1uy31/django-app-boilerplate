@@ -10,6 +10,7 @@ authors = ["first.last <email>"]
 python = "^3.8"
 dynaconf = "^3.1.4"
 Django = "^3.2.3"
+psycopg2-binary = "^2.8.6"
 
 [tool.poetry.dev-dependencies]
 
