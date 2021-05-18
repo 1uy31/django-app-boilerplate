@@ -9,6 +9,7 @@ authors = ["first.last <email>"]
 [tool.poetry.dependencies]
 python = "^3.8"
 dynaconf = "^3.1.4"
+Django = "^3.2.3"
 
 [tool.poetry.dev-dependencies]
 
