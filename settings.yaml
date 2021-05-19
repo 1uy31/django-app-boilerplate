@@ -52,6 +52,7 @@ default:
 development:
     ALLOWED_HOSTS:
         - '*'
+    TIME_ZONE: Europe/Helsinki
     DATABASES:
       default:
         ENGINE: django.db.backends.postgresql_psycopg2
