@@ -25,6 +25,7 @@ pytest-django = "^4.3.0"
 Faker = "^8.2.0"
 mypy = "^0.812"
 isort = "^5.8.0"
+coverage = "^5.5"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

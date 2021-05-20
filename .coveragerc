@@ -1,0 +1,22 @@
+[run]
+omit =
+    # omit anything in a .mypy_cache directory anywhere
+    */.mypy_cache/*
+    # omit everything in main_backend/migrations
+    main_backend/migrations/*
+    # omit this single file
+    main_backend/apps.py
+
+[report]
+omit =
+    main_backend/migrations/*
+    main_backend/apps.py
+exclude_lines =
+    pragma: no cover
+    def __repr__
+    if __name__ == .__main__.:
+ignore_errors = True
+show_missing = True
+
+[html]
+directory = coverage_html_report

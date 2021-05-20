@@ -2,6 +2,7 @@
 __pycache__
 .DS_Store
 .tox
-
+.coverage
+coverage_html_report
 # Ignore dynaconf secret files
 .secrets.*
