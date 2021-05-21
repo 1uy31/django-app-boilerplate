@@ -1,4 +1,5 @@
 [run]
+include = main_backend/*
 omit =
     # omit anything in a .mypy_cache directory anywhere
     */.mypy_cache/*
@@ -8,6 +9,7 @@ omit =
     main_backend/apps.py
 
 [report]
+include = main_backend/*
 omit =
     main_backend/migrations/*
     main_backend/apps.py

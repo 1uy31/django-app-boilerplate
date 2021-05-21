@@ -1,14 +1,18 @@
 default:
   # Django Required starting settings
-  STATIC_ROOT: .
+  STATIC_ROOT: staticfiles
   STATIC_URL: /static/
+  STATICFILES_STORAGE: whitenoise.storage.CompressedManifestStaticFilesStorage
   INSTALLED_APPS:
+    - whitenoise.runserver_nostatic
     - django.contrib.admin
     - django.contrib.auth
     - django.contrib.contenttypes
     - django.contrib.sessions
     - django.contrib.messages
     - django.contrib.staticfiles
+    - rest_framework
+    - main_backend
   MIDDLEWARE:
     - django.middleware.security.SecurityMiddleware
     - django.contrib.sessions.middleware.SessionMiddleware

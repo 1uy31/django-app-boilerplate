@@ -4,5 +4,6 @@ __pycache__
 .tox
 .coverage
 coverage_html_report
+staticfiles
 # Ignore dynaconf secret files
 .secrets.*
