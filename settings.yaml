@@ -59,27 +59,43 @@ default:
     - '127.0.0.1'
     - 'localhost'
 
-development:
+dev-docker:
+    DEBUG: true
     ALLOWED_HOSTS:
         - '*'
     TIME_ZONE: Europe/Helsinki
     DATABASES:
       default:
-        ENGINE: django.db.backends.postgresql_psycopg2
+        ENGINE: django.db.backends.postgresql
+        NAME: app_user_db
+        USER: app_user
+        PASSWORD: app_user_pw
+        HOST: app_database_container
+        PORT: 5432
+
+dev-virtual:
+    DEBUG: true
+    ALLOWED_HOSTS:
+        - '*'
+    TIME_ZONE: Europe/Helsinki
+    DATABASES:
+      default:
+        ENGINE: django.db.backends.postgresql
         NAME: django_app_boilerplate
-        USERNAME: postgres,
-        PASSWORD: postgrespw,
-        HOST: localhost,
-        PORT: 5432,
+        USER: postgres
+        PASSWORD: postgrespw
+        HOST: localhost
+        PORT: 5432
 
 production:
+    DEBUG: false
     ALLOWED_HOSTS:
         - 'PRODUCTION_URL'
     DATABASES:
       default:
-        ENGINE: database_engine
-        NAME: database_name
-        USERNAME: database_username,
-        PASSWORD: database_password,
-        HOST: database_host,
-        PORT: database_port,
+        ENGINE: django.db.backends.postgresql
+        NAME: PRODUCTION_DATABASE
+        USER: PRODUCTION_DATABASE_USER
+        PASSWORD: PRODUCTION_DATABASE_PASSWORD
+        HOST: PRODUCTION_DATABASE_HOST
+        PORT: PRODUCTION_DATABASE_PORT
