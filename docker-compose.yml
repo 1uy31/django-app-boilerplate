@@ -1,0 +1,43 @@
+version: '3'
+
+services:
+  database:
+    image: postgres:12.0-alpine
+    container_name: app_database_container
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=app_user_db
+      - POSTGRES_USER=app_user
+      - POSTGRES_PASSWORD=app_user_pw
+    restart: always
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+  app:
+    build:
+      context: .
+# dockerfile, first one is for development, second one is for production:
+      dockerfile: Dockerfile.development
+#      dockerfile: Dockerfile
+    container_name: app_container
+# volumes, first one is for development, second one is for production:
+    volumes:
+      - .:/app
+#    volumes:
+#      - .:/home/appuser/app
+    ports:
+      - 8000:8000
+    restart: unless-stopped
+    depends_on:
+      - database
+  nginx:
+    build: ./nginx
+    container_name: app_nginx_container
+    ports:
+      - 1337:80
+    restart: unless-stopped
+    depends_on:
+      - app
+
+volumes:
+  postgres_data:
