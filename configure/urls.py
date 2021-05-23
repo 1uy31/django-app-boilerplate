@@ -24,4 +24,4 @@ urlpatterns = [
 ]
 
 # from dynaconf import settings
-# if settings.ENV_FOR_DYNACONF == 'development':
+# if settings.ENV_FOR_DYNACONF == 'dev-virtual':
