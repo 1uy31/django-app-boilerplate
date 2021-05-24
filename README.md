@@ -10,21 +10,21 @@
   but still figuring how to apply inheritance in settings.yaml, so temporarily put it here)
 
 # Dev dependencies:
-pytest
-coverage
-pytest-django 
-Faker
-flake8
-pylint
-black - code format
-isort - for sorting imports
-mypy - static type check
-tox - a generic virtualenv management and test command line tool
+- pytest
+- coverage
+- pytest-django 
+- Faker
+- flake8
+- pylint
+- black - code format
+- isort - for sorting imports
+- mypy - static type check
+- tox - a generic virtualenv management and test command line tool
 
 # Basic usage:
 ### Settings (dynaconf):
 - Copy .template.secrets.yaml to new file and rename the new file as .secrets.yaml
-- Settings in this .secrets.yaml will override all settings from settings.yaml.
+- Settings in this .secrets.yaml will override settings from settings.yaml.
 - Modify .secrets.yaml and settings yaml according to the need.
 
 ### nginx:
