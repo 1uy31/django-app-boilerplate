@@ -27,6 +27,9 @@ tox - a generic virtualenv management and test command line tool
 - Settings in this .secrets.yaml will override all settings from settings.yaml.
 - Modify .secrets.yaml and settings yaml according to the need.
 
+### nginx:
+- Modify nginx/nginx.conf according to the need.
+
 ### With virtual env:
 - Install tox globally.
 - Run: tox -e dev 
