@@ -4,7 +4,7 @@ Global log for unique format.
 Usage:
 from main_backend.logger import logger
 
-log = logger.getChild("path_to_file")
+log = logger.getChild("__name__")
 
 log.debug('message')
 log.info('message')
