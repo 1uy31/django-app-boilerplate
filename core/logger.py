@@ -2,7 +2,7 @@
 Global log for unique format.
 
 Usage:
-from main_backend.logger import logger
+from core.logger import logger
 
 log = logger.getChild("__name__")
 
