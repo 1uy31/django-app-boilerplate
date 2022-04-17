@@ -1,9 +1,11 @@
 .idea
 __pycache__
 .DS_Store
+.mypy_cache
+.pytest_cache
 .tox
 .coverage
 coverage_html_report
 staticfiles
-# Ignore dynaconf secret files
-.secrets.*
+.env
+db.sqlite3

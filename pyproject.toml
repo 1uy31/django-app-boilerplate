@@ -1,32 +1,33 @@
 [tool.poetry]
 name = "django_app_boilerplate"
-version = "0.1.0"
+version = "1.0"
 description = "Boilerplate for django app, it contains popular tools used in development."
 license = "MIT"
 authors = ["first.last <email>"]
 
 
 [tool.poetry.dependencies]
-python = "^3.8"
-dynaconf = "^3.1.4"
-Django = "^3.2.3"
-psycopg2-binary = "^2.8.6"
-djangorestframework = "^3.12.4"
+python = "^3.10.3"
+Django = "^3.2.12"
+djangorestframework = "^3.13.1"
+django-debug-toolbar = "^3.2.4"
+python-dotenv = "^0.20.0"
 gunicorn = "^20.1.0"
-whitenoise = "^5.2.0"
-django-debug-toolbar = "^3.2.1"
+whitenoise = "^6.0.0"
+jsonschema = "^4.4.0"
+psycopg2-binary = "^2.9.3"
 
 [tool.poetry.dev-dependencies]
-black = "^21.5b1"
-pytest = "^6.2.4"
-flake8 = "^3.9.2"
-pylint = "^2.8.2"
-pytest-django = "^4.3.0"
-Faker = "^8.2.0"
-mypy = "^0.812"
-isort = "^5.8.0"
-coverage = "^5.5"
-tox = "^3.23.1"
+black = "^22.3.0"
+isort = "^5.10.1"
+flake8 = "^4.0.1"
+pylint = "^2.13.5"
+pytest-django = "^4.5.2"
+mypy = "^0.942"
+pytest = "^7.1.1"
+Faker = "^13.3.4"
+coverage = "^6.3.2"
+tox = "^3.25.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

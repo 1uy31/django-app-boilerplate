@@ -1,4 +1,4 @@
-FROM python:3.8.3-alpine
+FROM python:3.10.3-alpine
 
 # Prevents Python from writing pyc files to disc
 ENV PYTHONDONTWRITEBYTECODE 1
@@ -7,7 +7,6 @@ ENV PYTHONUNBUFFERED 1
 
 RUN mkdir /app
 WORKDIR /app
-ENV DJANGO_ENV=dev-docker
 
 RUN apk update \
     && apk add nano postgresql-dev python3-dev musl-dev gcc libffi-dev rust cargo openssl-dev \

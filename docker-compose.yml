@@ -2,7 +2,7 @@ version: '3'
 
 services:
   database:
-    image: postgres:12.0-alpine
+    image: postgres:14.2-alpine
     container_name: app_database_container
     ports:
       - "5432:5432"

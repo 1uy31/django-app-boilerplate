@@ -1,4 +1,4 @@
-FROM python:3.8.3-alpine
+FROM python:3.10.3-alpine
 
 # Prevents Python from writing pyc files to disc
 ENV PYTHONDONTWRITEBYTECODE 1
@@ -11,7 +11,6 @@ RUN addgroup ${APP_USER} && adduser -D -G ${APP_USER} ${APP_USER}
 
 RUN mkdir /home/appuser/app
 WORKDIR /home/appuser/app
-ENV DJANGO_ENV=production
 
 RUN apk update \
     && apk add nano postgresql-dev python3-dev musl-dev gcc libffi-dev rust cargo openssl-dev \

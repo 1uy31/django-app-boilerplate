@@ -2,12 +2,11 @@
 - python
 - Django
 - djangorestframework
+- python-dotenv
 - gunicorn
 - whitenoise
 - psycopg2-binary (for using postgres database)
-- dynaconf (for managing settings)
-- django-debug-toolbar (this should be in the list of dev packages, 
-  but still figuring how to apply inheritance in settings.yaml, so temporarily put it here)
+- django-debug-toolbar
 
 # Dev dependencies:
 - pytest
@@ -22,10 +21,9 @@
 - tox - a generic virtualenv management and test command line tool
 
 # Basic usage:
-### Settings (dynaconf):
-- Copy .template.secrets.yaml to new file and rename the new file as .secrets.yaml
-- Settings in this .secrets.yaml will override settings from settings.yaml.
-- Modify .secrets.yaml and settings yaml according to the need.
+### Settings:
+- Copy .env.example to a new file and rename the new file as .env
+- Modify .env according to the need.
 
 ### nginx:
 - Modify nginx/nginx.conf according to the need.
